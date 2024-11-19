@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doom</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jacquarda+Bastarda+9&family=Press+Start+2P&family=Protest+Guerrilla&family=Silkscreen:wght@400;700&family=Wendy+One&display=swap');
+        </style>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="indeex">
+        <nav>
+          <img src="./imagens/DOOM1.jpg" class="img1">
+          <a href="./index.html">HOME</a>
+          <a href="./tutorial.html">TUTORIAL</a>
+          <a href="./integrantes.html">INTEGRANTES</a>
+        </nav>
+    </header>
+<div class="titulo1"><h2>Passo a passo para a montagem</h2></div>
+<div class="lista">
+    <ol>
+        <li>o primeiro passo é baixar a IDE do ardunio. Para isso acesse o <a href="https://www.arduino.cc/en/software" target="_blank">site oficial do Arduino</a>, baixe a versão compatível com o seu sistema operacional (Windows, macOS ou Linux). E siga as instruções de instalação</li>
+    
+        <li>separe os seguintes materiais: 1x Arduino Uno, 1x Protoboard, 5x Botões, 1x Tela OLED, 1x Resistor de 220 ohms, 1x Buzzer, 21x Jumpers e 1x LED Vermelho. Certifique-se de ter todos os itens listados, organizados e à mão para facilitar a montagem</li>
+    
+        <li>Conecte os componentes na protoboard conforme mostrado na imagem a seguir. O buzzer, a tela OLED, o LED, o resistor e os botões(estes terão as funções de atirar, esquerda, frente, tras, direita na ordem apresetada na imagem) devem ser conectados de acordo com a disposição indicada na imagem</li>
+        <img src="/imagens/tut1.jpeg" class="imagemtut">
+        <li>Conecte o pino GND (terra) da sua placa Arduino ao trilho de linha negativa (geralmente marcado com um sinal de menos "-") da sua protoboard. Em seguida, faça a conexão entre os quatro trilhos negativos da protoboard, garantindo que todos compartilhem uma referência comum de terra. Isso é essencial para o funcionamento correto do circuito e para que todos os componentes na protoboard funcionem adequadamente</li>
+        <img src="./imagens/tut2.jpeg" class="imagemtut">
+        <li>Conecte o terminal negativo de todos os componentes à parte negativa da protoboard, que já está conectada ao pino GND do Arduino. Isso garantirá que todos os componentes compartilhem uma referência comum de terra, permitindo o funcionamento adequado do circuito</li>
+        <img src="./imagens/tut3.jpeg" class="imagemtut">
+        <li>Agora, conecte os componentes à placa Arduino da seguinte forma: o terminal positivo do LED, que estará conectado a um resistor, deve ser ligado ao pino 13; o terminal positivo do buzzer deve ser conectado ao pino 9; o terminal positivo do botão de atirar deve ser conectado ao pino 10; o terminal positivo do botão de ir para a esquerda deve ser conectado ao pino 6; o terminal positivo do botão de ir para frente deve ser conectado ao pino 8; o terminal positivo do botão de ir para trás deve ser conectado ao pino 3; e o terminal positivo do botão de ir para a direita deve ser conectado ao pino 7</li>
+        <img src="./imagens/tut4.jpeg" class="imagemtut">
+        <li>Para conectar a tela OLED ao Arduino, faça as seguintes conexões: o pino VDD da tela deve ser conectado ao pino 3,3V do Arduino, o pino SCK deve ser conectado ao pino A5 e o pino SDA deve ser conectado ao pino A4. Essas conexões permitirão que a tela OLED se comunique corretamente com o Arduino e seja alimentada adequadamente.</li>
+        <img src="./imagens/tut5.jpeg" class="imagemtut">
+        <li>Antes de carregar o código no Arduino, abra a IDE do Arduino e selecione a placa correta. Para isso, vá até o menu Ferramentas > Placa e escolha "Arduino Uno" (ou o modelo correspondente ao seu Arduino). Em seguida, baixe o código do projeto pelo <a href="https://github.com/kaykyDias04/doom-arduino-uno" target="_blank">GitHub</a> ou pelo botão de download disponível. Após o download, conecte o Arduino ao seu computador usando o cabo USB. Carregue o código baixado na IDE do Arduino, clicando no botão de upload. Assim que o código for carregado, ao pressionar o botão de atirar, o jogo começará</li>
+    
+    </ol>
+    <button id="botao">Baixar Codigo</button>
+    <iframe src="https://www.youtube.com/embed/MuYXhffJzsQ?si=3VmsbAR_R_Vp71Ld" class="video2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+</div>
+<script src="/script.js"></script>
+</body>
+</html>
